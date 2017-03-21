@@ -1,0 +1,49 @@
+.no-padding {
+    padding: 0;
+}
+
+#console{
+	background-color: rgb(29, 31, 32);
+    color: rgb(250,250,250);
+    word-wrap: normal;
+    overflow: auto;
+    border: none;
+}
+#console textarea, #console textarea:focus {
+    resize: none;
+    overflow: hidden;
+    border: none;
+    overflow: hidden;
+    background-color: rgb(29, 31, 32);
+    visibility: visible;
+}
+
+.mdtTableContainer tr td {
+  height: 35px;
+}
+
+md-sidenav, 
+md-sidenav.md-locked-open, 
+md-sidenav.md-closed.md-locked-open-add-active {
+    min-width: 200px !important;
+    width: 85vw !important;
+    max-width: 250px !important;
+}
+
+tbody {
+    display:block;
+    max-height: 320px;
+    overflow:auto;
+}
+thead, tbody tr {
+    display:table;
+    width:100%;
+    table-layout:fixed;/* even columns width , fix width of table too*/
+}
+thead {
+    width: calc( 100% - 1em )/* scrollbar is average 1em/16px width, remove it from thead width *
+}
+table {
+    width: 400px;
+}
+

@@ -1,0 +1,22 @@
+<div flex layout="row">
+        <md-sidenav md-is-locked-open="$mdMedia('gt-sm')" md-component-id="left" class="md-whiteframe-z2">
+            <md-toolbar>
+                    <h1 class="md-toolbar-tools">Database and Tables</h1>
+            </md-toolbar>
+        </md-sidenav>
+
+        <md-content flex layout="column" layout-padding>
+            <div class="no-padding" flex="70" style="margin-bottom: 10px;">
+                <mdt-table mdt-row="data" md-whiteframe-z1 paginated-rows="{isEnabled: true, rowsPerPageValues: [5,10,20,50,200, 1000, 5000, 10000, 50000]}">
+                        <mdt-header-row>
+                            <mdt-column align-rule="left" ng-repeat="column in columns" >{{ column }}</mdt-column>
+                        </mdt-header-row>
+                </mdt-table>
+            </div>
+            <div flex="30" id="console" class="md-whiteframe-z1">
+                <div ng-hide="inputs.length === 0" ng-repeat="inp in inputs">{{ "aDB> " + inp.text }}</div>
+                {{ "aDB> " + input.text + '|'}}
+                <textarea ng-model="input.text" ng-keyup="$event.keyCode == 13 && checkCommand($event.keyCode)" style="height: 1px; width: 1px;" ng-trim="true"></textarea>
+            </div>
+        </md-content>
+</div>
